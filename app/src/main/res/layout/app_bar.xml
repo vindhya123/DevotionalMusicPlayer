@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:src="@drawable/calender"
+        android:background="@color/colorAccent"/>
+
+
+    <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:weightSum="1">
+
+        <TextView
+           android:id="@+id/toolbar_title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="20dp"
+           android:gravity="top"
+           android:layout_marginTop="20dp"
+           android:text="Devotional Songs"
+           android:textColor="#FFD700"
+           android:textSize="30dp"
+           android:textStyle="bold"
+            />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search For Stotram"
+        android:gravity="bottom"
+           android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+
+           android:textSize="20dp"
+        android:id="@+id/toolbar_subtitle"
+        android:textColor="#FFD700" />
+
+
+   </LinearLayout>
+
+
+</android.support.v7.widget.Toolbar>
