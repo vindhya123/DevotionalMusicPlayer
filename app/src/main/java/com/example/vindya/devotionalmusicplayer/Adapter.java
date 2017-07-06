@@ -11,18 +11,14 @@ import android.widget.TextView;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by vindya on 7/2/2017.
- */
-
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>
+class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder>
 {
 private List<infermation>data= Collections.emptyList();
-    private Context cntxt;
     Adapter(Context context,List<infermation>dataCollection)
     {
         this.data=dataCollection;
-        this.cntxt=context;
+        
+
     }
 
 
@@ -30,8 +26,7 @@ private List<infermation>data= Collections.emptyList();
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
     {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.rlist_items,parent,false);
-        MyViewHolder vh = new MyViewHolder(view);
-        return vh;
+        return new MyViewHolder(view);
     }
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position)
@@ -47,12 +42,12 @@ private List<infermation>data= Collections.emptyList();
     }
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder
+     class MyViewHolder extends RecyclerView.ViewHolder
     {
         private TextView TextViewForRecycler;
         private ImageView ImageViewForRecycler;
 
-        public MyViewHolder(View itemView)
+         MyViewHolder(View itemView)
         {
             super(itemView);
             TextViewForRecycler=(TextView)itemView.findViewById(R.id.textview);

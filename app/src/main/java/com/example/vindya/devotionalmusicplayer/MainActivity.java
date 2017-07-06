@@ -20,7 +20,6 @@ Toolbar toolbar;
         setContentView(R.layout.activity_main);
         toolbar=(Toolbar)findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
         recyclerView=(RecyclerView)findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager=new GridLayoutManager(getApplicationContext(),2);
